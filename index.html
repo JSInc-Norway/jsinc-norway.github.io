@@ -10,10 +10,13 @@
     sitekey: '57857517-f392-4a9f-8ea3-fb01dcd6435b',
     theme: 'dark',
     'error-callback': 'jserror',
+    'callback': 'completedcaptcha',
   });
   function jserror() {
     alert("JS-Captcha feilet!");
   }
+  function completedcaptcha() {
+    alert("You passed the test!")
 </script>
 <style>
   .lds-ring {
