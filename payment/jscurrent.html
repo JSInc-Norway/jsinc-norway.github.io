@@ -1,0 +1,65 @@
+<h1>Betal i JS Selvbetjent vis nettleser*</h1>
+<title>JS Inc. Purchase</title>
+<p>Waiting for purchase...</p>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+<div class="h-captcha" data-sitekey="57857517-f392-4a9f-8ea3-fb01dcd6435b" data-theme="dark" data-error-callback="jserror" data-callback="completedcaptcha"></div>
+<script src="https://js.hcaptcha.com/1/api.js?hl=fr" async defer></script>
+<script type="text/javascript">
+  hcaptcha.render('captcha-1', {
+    sitekey: '57857517-f392-4a9f-8ea3-fb01dcd6435b',
+    theme: 'dark',
+    'error-callback': 'jserror',
+    'callback': 'completedcaptcha'
+  });
+  function jserror() {
+    alert("JS-Captcha feilet!");
+  }
+  function completedcaptcha() {
+    alert("You will now be completing this purchase. Press the button to confirm!")
+    location.href = "./completed.html"
+  }
+</script>
+<style>
+  body {
+    background-color: #59ff75;
+font-family: sans-serif;
+  }
+  .lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #000000;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #000000 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
